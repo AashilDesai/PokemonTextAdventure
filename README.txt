@@ -33,7 +33,7 @@ Valid Instructions:
 Implementation:
 This program is written as a collection of files and bash scripts. To run it, please run the script "adventure.sh"
 
-Each file (besides adventure.sh and README.txt) refers to a specific location. When the player is in a particular location, adventure.sh passes the player's input into each of the locations. The player's inventory and pokemon are stored in .txt files.
+Each file (besides adventure.sh and README.txt) refers to a specific location. When the player is in a particular location, adventure.sh passes the player's input into each of the locations. The player's inventory and pokemon are stored in .txt files (in the "windows" folder).
 
 When a particular script runs (like for example "pallet_town.sh  SOME_COMMAD"), it returns an integer from 0-7, which tells adventure.sh how to behave.
 	0 indicates that the player is in the same location.
