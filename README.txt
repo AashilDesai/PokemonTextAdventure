@@ -16,8 +16,7 @@ Valid Instructions:
 		Moves the player in a marticular cardinal direction (North, South, East, or West).
 		If the player is not permitted to move in a certain direction, they will be notified.
 	inspect <object>
-		If you are currently in the inventory or pokemon windows, gives a description of the pokemon/item
-		Else if <object> is a person, this command is the same as "talk to <person>"
+		If <object> is a person, this command is the same as "talk to <person>"
 		Else if <object> is a pokemon, this command is the same as "catch <pokemon>"
 		Else if <object> is either "wildgrass" or "wild grass", this command is the same as "enter wildgrass"
 		Else, this command returns the discription of an object
@@ -29,6 +28,8 @@ Valid Instructions:
 		The same as "enter wild grass"
 	enter wild grass
 		Lets the player enter wild grass
+	forfeit
+		The game ends and the player loses
 
 Implementation:
 This program is written as a collection of files and bash scripts. To run it, please run the script "adventure.sh"
