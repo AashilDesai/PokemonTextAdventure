@@ -33,9 +33,9 @@ Valid Instructions:
 Implementation:
 This program is written as a collection of files and bash scripts. To run it, please run the script "adventure.sh"
 
-Each file (besides adventure.sh and README.txt) refers to a specific location. When the player is in a particular location, adventure.sh passes the player's input into each of the locations, as well as a list of the player's current inventory and pokemon.
+Each file (besides adventure.sh and README.txt) refers to a specific location. When the player is in a particular location, adventure.sh passes the player's input into each of the locations. The player's inventory and pokemon are stored in .txt files.
 
-When a particular script runs (like for example "pallet_town.sh inventory pokemon SOME_COMMAD"), it returns an integer from 0-7, which tells adventure.sh how to behave.
+When a particular script runs (like for example "pallet_town.sh  SOME_COMMAD"), it returns an integer from 0-7, which tells adventure.sh how to behave.
 	0 indicates that the player is in the same location.
 	1-6 indicates that the player should move to a particular location indicated by the number
 	7 indicates that the player has won the game
