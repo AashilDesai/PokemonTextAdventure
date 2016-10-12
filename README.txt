@@ -8,18 +8,11 @@ Valid Instructions:
 		This command is always valid, and pulls up the current inventory, which contains all the items the player has found to date.
 	pokemon
 		This command is always valid and pulls up a list of all the pokemon caught by the player.
-	exit
-		closes the inventory or pokemon windows
 	look
 		Gives a general overview of where the player currently is (i.e. the player looks around their current location)
 	go <direction>
 		Moves the player in a marticular cardinal direction (North, South, East, or West).
 		If the player is not permitted to move in a certain direction, they will be notified.
-	inspect <object>
-		If <object> is a person, this command is the same as "talk to <person>"
-		Else if <object> is a pokemon, this command is the same as "catch <pokemon>"
-		Else if <object> is either "wildgrass" or "wild grass", this command is the same as "enter wildgrass"
-		Else, this command returns the discription of an object
 	talk to <person>
 		Engages the person in dialog
 	catch <pokemon>

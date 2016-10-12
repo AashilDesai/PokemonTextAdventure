@@ -8,26 +8,27 @@ pokemonFile='./windows/pokemon.txt'
 >$inventoryFile
 >$pokemonFile
 
+
 currentLocation='pallet_town' #we start in pallet town
 gameInProgress=true
 playerWin=false
 
 echo "Welcome to the wonderful world of Pokémon!"
-echo "Now that you are now 10, you must set off on your own pokémon journey and try to collect as many badges as possible."
+echo "Now that you are 10 years old, you must set off on your own pokémon journey and try to collect as many badges as possible."
 
 while $gameInProgress #until we have reached a "player wins" state
 do
 	bash "./locations/${currentLocation}.sh" "intro"
 	echo "What do you want to do?"
-	read instruction
+	read instruction arg
 
 	case $instruction in
 		inventory) echo "Your Inventory:"
-				cat $inventoryFile | echo ;;
+				cat $inventoryFile ;;
 		pokemon) echo "Your Pokemon:"
-				cat $pokemonFile | echo ;;
+				cat $pokemonFile ;;
 		forfeit) gameInProgress=false ;;
-		*) bash "./locations/${currentLocation}.sh" $instruction 
+		*) bash "./locations/${currentLocation}.sh" $instruction $arg
 			case $? in 
 				0) ;; #do nothing, since we changed nothing
 				1) currentLocation="pallet_town" ;;
@@ -38,10 +39,13 @@ do
 				6) currentLocation="pewter_city" ;;
 				7) gameInProgress=false
 					playerWin=true ;;
-				*) exit 1 #this should never happen
+				*) echo "ERROR - One of the locations outputted an incorrect value" #this should never happen
+					gameInProgress=false ;;
 			esac
 				;;
 	esac
+
+	echo ""
 done
 
 if $playerWin
