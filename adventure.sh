@@ -38,7 +38,7 @@ do
 				4) currentLocation="route_22" ;;
 				5) currentLocation="viridian_forest";;
 				6) currentLocation="pewter_city" ;;
-				7) gameInProgress=false
+				7) gameInProgress=false #they've won the game!
 					playerWin=true ;;
 				*) echo "ERROR - One of the locations outputted an incorrect value" #this should never happen
 					gameInProgress=false ;;
