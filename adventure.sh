@@ -1,7 +1,7 @@
 #!/bin/bash
 
-inventoryFile='./windows/inventory.txt'
-pokemonFile='./windows/pokemon.txt'
+inventoryFile='./data/inventory.txt'
+pokemonFile='./data/pokemon.txt'
 
 #At the start of the game, we wish to empty the player's inventory and pokemon
 
@@ -21,6 +21,7 @@ do
 	bash "./locations/${currentLocation}.sh" "intro"
 	echo "What do you want to do?"
 	read instruction arg
+	echo ""
 
 	case $instruction in
 		inventory) echo "Your Inventory:"
