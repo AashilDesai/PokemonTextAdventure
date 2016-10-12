@@ -51,7 +51,7 @@ done
 
 if $playerWin
 	then
-	echo "Congrats for winning!"
+	echo "CONGRATULATIONS! You have beaten the game!"
 else
-	echo "You lose!"
+	echo "GAME OVER"
 fi

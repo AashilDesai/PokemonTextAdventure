@@ -35,7 +35,7 @@ elif [[ $1 == "go" ]]
 			echo "Unfortunately there is a sea to the south. Perhaps it's best not to go that way"
 		elif [[ $2 == "west" ]] ||  [[ $2 == "east" ]]
 			then
-			echo "The trees to either side are thick. Perhaps it's best not to go that way"
+			echo "The trees that way are thick. Perhaps it's best not to go that way"
 		elif [[ $2 == "north" ]]
 			then
 			if [[ $numPokemon -gt 0 ]]

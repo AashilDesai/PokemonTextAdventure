@@ -36,7 +36,7 @@ elif [[ $1 == "go" ]]
 		exit 1
 	elif [[ $2 == "west" ]] ||  [[ $2 == "east" ]]
 		then
-		echo "The trees to either side are thick. Perhaps it's best not to go that way"
+		echo "The trees that way are thick. Perhaps it's best not to go that way"
 	elif [[ $2 == "north" ]]
 		then
 		exit 3
